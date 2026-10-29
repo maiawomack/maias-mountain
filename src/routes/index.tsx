@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Github } from "lucide-react";
-import headshot from "@/assets/maia-womack-photo.jpeg.asset.json";
+
 import { TrailMap } from "@/components/TrailMap";
 import { LensToggle } from "@/components/LensToggle";
 import { SocialLinks } from "@/components/SiteChrome";
@@ -69,7 +69,7 @@ function Index() {
           <div className="relative mx-auto w-full max-w-sm">
             <div className="sign-lg rotate-2 p-3">
               <img
-                src={headshot.url}
+                src={`${import.meta.env.BASE_URL}maia-womack-photo.jpeg`}
                 alt="Maia Womack skiing"
                 className="aspect-[4/5] w-full rounded-sm object-cover object-[50%_40%]"
               />

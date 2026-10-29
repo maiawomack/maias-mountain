@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import headshot from "@/assets/maia-womack-photo.jpeg.asset.json";
+
 import { SocialLinks } from "@/components/SiteChrome";
 import { coursework, profile, skills } from "@/lib/resume";
 
@@ -34,7 +34,7 @@ function AboutPage() {
         <div className="space-y-5">
           <div className="sign-lg p-3">
             <img
-              src={headshot.url}
+              src={`${import.meta.env.BASE_URL}maia-womack-photo.jpeg`}
               alt="Maia Womack skiing"
               loading="lazy"
               className="aspect-square w-full rounded-sm object-cover object-[50%_45%]"
@@ -56,7 +56,10 @@ function AboutPage() {
             <p className="eyebrow mt-5 text-muted-foreground">Relevant coursework</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {coursework.map((c) => (
-                <span key={c} className="rounded-sm border border-border bg-muted px-2 py-1 text-xs font-medium">
+                <span
+                  key={c}
+                  className="rounded-sm border border-border bg-muted px-2 py-1 text-xs font-medium"
+                >
                   {c}
                 </span>
               ))}
@@ -71,7 +74,10 @@ function AboutPage() {
                   <p className="eyebrow text-primary">{g.group}</p>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {g.items.map((s) => (
-                      <span key={s} className="rounded-sm bg-secondary px-2 py-0.5 font-mono text-[0.72rem]">
+                      <span
+                        key={s}
+                        className="rounded-sm bg-secondary px-2 py-0.5 font-mono text-[0.72rem]"
+                      >
                         {s}
                       </span>
                     ))}
