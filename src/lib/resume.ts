@@ -17,6 +17,8 @@ export interface Trail {
   stack: string[];
   bullets: Bullet[];
   repo?: string;
+  /** Closed trails show on the map but hide details until reopened */
+  closed?: boolean;
   /** SVG path on the 1920x1200 trail map */
   path: string;
   /** Where the trail sign sits on the map */
@@ -178,6 +180,7 @@ export const trails: Trail[] = [
   },
   {
     slug: "coursework",
+    closed: true,
     name: "Coursework Projects",
     difficulty: "green",
     event: "University of Washington",

@@ -56,6 +56,7 @@ export function TrailMap() {
                       d={t.path}
                       className={cn("trail-path", trailStrokeClass[t.difficulty])}
                       strokeWidth={isFocus ? 20 : 13}
+                      strokeDasharray={t.closed ? "4 26" : undefined}
                     />
                     {isFocus && (
                       <path
@@ -96,6 +97,11 @@ export function TrailMap() {
               >
                 <DifficultyIcon difficulty={t.difficulty} title={false} className="h-4" />
                 {t.name}
+                {t.closed && (
+                  <span className="ml-1 rounded-sm bg-primary px-1 text-[0.65rem] text-primary-foreground">
+                    Closed
+                  </span>
+                )}
               </button>
             ))}
 
@@ -165,7 +171,13 @@ function TrailSign({ trail }: { trail: Trail }) {
         </div>
       </dl>
 
-      <BulletList bullets={trail.bullets} className="mt-4" />
+      {trail.closed ? (
+        <p className="mt-4 rounded-sm border-2 border-dashed border-primary p-3 text-sm font-semibold text-primary">
+          Trail closed. More coursework projects coming soon.
+        </p>
+      ) : (
+        <BulletList bullets={trail.bullets} className="mt-4" />
+      )}
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         {trail.stack.map((s) => (
@@ -175,7 +187,7 @@ function TrailSign({ trail }: { trail: Trail }) {
         ))}
       </div>
 
-      <div className="mt-auto flex flex-wrap gap-2 pt-5">
+      {!trail.closed && <div className="mt-auto flex flex-wrap gap-2 pt-5">
         <Link
           to="/trails/$slug"
           params={{ slug: trail.slug }}
@@ -197,7 +209,7 @@ function TrailSign({ trail }: { trail: Trail }) {
             No public repo (hardware / private)
           </span>
         )}
-      </div>
+      </div>}
     </aside>
   );
 }

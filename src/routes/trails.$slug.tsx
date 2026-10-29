@@ -63,7 +63,13 @@ function TrailPage() {
             <div className="mb-5 flex items-center justify-between gap-4">
               <h2 className="text-3xl font-black uppercase">Run notes</h2>
             </div>
-            <BulletList bullets={trail.bullets} />
+            {trail.closed ? (
+              <p className="rounded-sm border-2 border-dashed border-primary p-4 font-semibold text-primary">
+                Trail closed. More coursework projects coming soon.
+              </p>
+            ) : (
+              <BulletList bullets={trail.bullets} />
+            )}
             <div className="mt-8">
               <LensToggle />
             </div>
