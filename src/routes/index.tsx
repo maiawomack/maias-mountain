@@ -112,7 +112,7 @@ function Index() {
                   {trail.name}
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  {trail.event} · {trail.crew}
+                  {trail.closed ? "Closed · more coming soon" : `${trail.event} · ${trail.crew}`}
                 </p>
               </Link>
               <div className="flex flex-col items-end gap-2">
