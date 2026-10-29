@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Maias Mountain Of Makings
+
+I want to build a personal website based on my resume. should be applicable for both SWE and PM roles. The theme should be a ski mountain map. Each trail corresponds to a project, ranging in difficulty based on the trail's difficulty. Easy projects --> green; hard projects --> double black diamond. Should link to the project repositories in my github where possible. I have included a headshot to add. also link my linkedin: https://www.linkedin.com/in/maia-womack
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/49170cda-e48a-48ce-b4e9-7a59381690a4).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
