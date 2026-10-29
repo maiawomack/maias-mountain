@@ -49,7 +49,7 @@ function TrailPage() {
       <article className="sign-lg mt-6 overflow-hidden">
         <header className="topo border-b-2 border-ink bg-sky p-6 sm:p-8">
           <div className="flex items-center gap-3">
-            <DifficultyIcon difficulty={trail.difficulty} className="h-7 w-7" />
+            <DifficultyIcon difficulty={trail.difficulty} className="h-7" />
             <span className="eyebrow">{difficultyLabel[trail.difficulty]}</span>
           </div>
           <h1 className="mt-3 text-5xl font-black uppercase leading-[0.9] sm:text-7xl">

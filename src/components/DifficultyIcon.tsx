@@ -14,7 +14,7 @@ export function DifficultyIcon({ difficulty, className, title = true }: Props) {
   return (
     <svg
       viewBox={difficulty === "double-black" ? "0 0 44 24" : "0 0 24 24"}
-      className={cn(difficulty === "double-black" ? "h-5 w-9" : "h-5 w-5", className)}
+      className={cn("h-5 w-auto shrink-0", difficulty === "double-black" ? "aspect-[44/24]" : "aspect-square", className)}
       role={title ? "img" : undefined}
       aria-label={title ? label : undefined}
       aria-hidden={title ? undefined : true}

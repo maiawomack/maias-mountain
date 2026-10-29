@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 const taglines = {
   eng: {
     kicker: "Software · Firmware · Robotics",
-    line: "I build things that move — from STM32 firmware on a Mars-rover arm to real-time AI agents that talk skiers down expert terrain.",
+    line: "I build things that move — from STM32 firmware on a rover arm to real-time AI agents that talk skiers down expert terrain.",
   },
   product: {
     kicker: "Product · Operations · Strategy",
