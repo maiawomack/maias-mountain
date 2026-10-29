@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import headshot from "@/assets/maia-womack-headshot.png.asset.json";
+import headshot from "@/assets/maia-womack-photo.jpeg.asset.json";
 import { SocialLinks } from "@/components/SiteChrome";
 import { coursework, profile, skills } from "@/lib/resume";
 
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <p className="eyebrow text-muted-foreground">Warm up · Gear up</p>
+      <p className="eyebrow text-muted-foreground">Education · Skills · Contact</p>
       <h1 className="mt-1 text-6xl font-black uppercase leading-none sm:text-7xl">Base Lodge</h1>
 
       <div className="mt-10 grid gap-8 md:grid-cols-[300px_1fr]">
@@ -35,9 +35,9 @@ function AboutPage() {
           <div className="sign-lg p-3">
             <img
               src={headshot.url}
-              alt="Portrait of Maia Womack"
+              alt="Maia Womack skiing"
               loading="lazy"
-              className="aspect-square w-full rounded-sm object-cover object-top"
+              className="aspect-square w-full rounded-sm object-cover object-[50%_45%]"
             />
           </div>
           <SocialLinks />
@@ -82,10 +82,9 @@ function AboutPage() {
           </section>
 
           <section className="sign bg-ink p-6 text-snow">
-            <h2 className="text-3xl font-black uppercase">Ride the lift together</h2>
+            <h2 className="text-3xl font-black uppercase">Contact</h2>
             <p className="mt-2 max-w-xl text-snow/80">
-              Open to software engineering and product internships. The fastest way to reach me is
-              email or LinkedIn.
+              Looking for software engineering and product internships. Email or LinkedIn.
             </p>
             <a
               href={`mailto:${profile.email}`}
