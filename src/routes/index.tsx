@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Github } from "lucide-react";
-import headshot from "@/assets/maia-womack-headshot.png.asset.json";
+import headshot from "@/assets/maia-womack-photo.jpeg.asset.json";
 import { TrailMap } from "@/components/TrailMap";
 import { LensToggle } from "@/components/LensToggle";
 import { SocialLinks } from "@/components/SiteChrome";

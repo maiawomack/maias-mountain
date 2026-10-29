@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import headshot from "@/assets/maia-womack-headshot.png.asset.json";
+import headshot from "@/assets/maia-womack-photo.jpeg.asset.json";
 import { SocialLinks } from "@/components/SiteChrome";
 import { coursework, profile, skills } from "@/lib/resume";
 
