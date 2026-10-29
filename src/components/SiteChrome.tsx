@@ -68,7 +68,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div>
           <p className="font-display text-3xl font-black uppercase">Womack Peak</p>
-          <p className="eyebrow mt-1 text-snow/60">Ski within your ability · Build beyond it</p>
+          <p className="eyebrow mt-1 text-snow/60">Maia Womack · UW CS & Physics</p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm">
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:underline">

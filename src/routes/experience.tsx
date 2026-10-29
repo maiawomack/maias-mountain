@@ -48,11 +48,10 @@ function ExperiencePage() {
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
-          <p className="eyebrow text-muted-foreground">Uphill capacity</p>
+          <p className="eyebrow text-muted-foreground">3 roles · 3 leadership positions</p>
           <h1 className="mt-1 text-6xl font-black uppercase leading-none sm:text-7xl">The Lifts</h1>
           <p className="mt-3 max-w-lg text-muted-foreground">
-            The roles that carried me up the mountain. Switch your line to highlight engineering or
-            product work.
+            Work and leadership roles. The toggle highlights engineering or product points.
           </p>
         </div>
         <LensToggle />
