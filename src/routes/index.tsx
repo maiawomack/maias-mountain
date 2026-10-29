@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 const taglines = {
   eng: {
     kicker: "Software · Firmware · Robotics",
-    line: "I write STM32 firmware in C for Husky Robotics' rover arm, and I've shipped 4 hackathon projects in Python and TypeScript, including a solo-built ski hazard alert agent at Cal Hacks 13.",
+    line: "I write STM32 firmware in C for Husky Robotics' rover arm, and I've built 3 hackathon projects in Python and TypeScript, including a solo-built ski hazard alert agent at Cal Hacks 13.",
   },
   product: {
     kicker: "Product · Operations · SQL",
