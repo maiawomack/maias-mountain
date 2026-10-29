@@ -94,7 +94,7 @@ export function TrailMap() {
                 )}
                 style={{ left: `${(t.label.x / W) * 100}%`, top: `${(t.label.y / H) * 100}%` }}
               >
-                <DifficultyIcon difficulty={t.difficulty} title={false} className="h-4 w-4 [&.w-9]:w-7" />
+                <DifficultyIcon difficulty={t.difficulty} title={false} className="h-4" />
                 {t.name}
               </button>
             ))}
