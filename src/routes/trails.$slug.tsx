@@ -35,7 +35,7 @@ function TrailPage() {
   const { trail } = Route.useLoaderData();
   const all = trailsByDifficulty();
   const idx = all.findIndex((t) => t.slug === trail.slug);
-  const next = all[(idx + 1) % all.length];
+  const next = all[(idx + 1) % all.length] ?? all[0]!;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">

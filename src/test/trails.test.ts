@@ -9,7 +9,7 @@ describe("trail difficulty", () => {
 
   it("lists trails from green to double black", () => {
     const sorted = trailsByDifficulty();
-    expect(sorted[0].difficulty).toBe("green");
+    expect(sorted[0]?.difficulty).toBe("green");
     expect(sorted.at(-1)?.difficulty).toBe("double-black");
   });
 

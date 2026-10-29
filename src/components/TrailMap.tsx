@@ -11,13 +11,13 @@ const W = 1920;
 const H = 1200;
 
 export function TrailMap() {
-  const [selected, setSelected] = useState<string>(trails[0].slug);
+  const [selected, setSelected] = useState<string>(trails[0]!.slug);
   const [hovered, setHovered] = useState<string | null>(null);
-  const active = trails.find((t) => t.slug === selected) ?? trails[0];
+  const active = trails.find((t) => t.slug === selected) ?? trails[0]!;
   const focus = hovered ?? selected;
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px]">
+    <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_380px]">
       <div className="sign-lg overflow-hidden p-0">
         <div className="overflow-x-auto">
           <div className="relative min-w-[720px]" style={{ aspectRatio: `${W} / ${H}` }}>
@@ -43,30 +43,30 @@ export function TrailMap() {
                     onMouseEnter={() => setHovered(t.slug)}
                     onMouseLeave={() => setHovered(null)}
                     onClick={() => setSelected(t.slug)}
-                    style={{ opacity: dimmed ? 0.55 : 1, transition: "opacity 200ms" }}
+                    style={{ opacity: dimmed ? 0.8 : 1, transition: "opacity 200ms" }}
                   >
                     {/* snow casing */}
                     <path
                       d={t.path}
                       className="trail-path stroke-snow"
-                      strokeWidth={isFocus ? 22 : 15}
+                      strokeWidth={isFocus ? 34 : 24}
                       opacity={0.9}
                     />
                     <path
                       d={t.path}
                       className={cn("trail-path", trailStrokeClass[t.difficulty])}
-                      strokeWidth={isFocus ? 12 : 7}
+                      strokeWidth={isFocus ? 20 : 13}
                     />
                     {isFocus && (
                       <path
                         d={t.path}
                         className="trail-path trail-flow stroke-snow"
-                        strokeWidth={3}
+                        strokeWidth={5}
                         opacity={0.85}
                       />
                     )}
                     {/* generous hit area */}
-                    <path d={t.path} className="trail-path stroke-transparent" strokeWidth={48} />
+                    <path d={t.path} className="trail-path stroke-transparent" strokeWidth={60} />
                   </g>
                 );
               })}
@@ -99,7 +99,7 @@ export function TrailMap() {
               </button>
             ))}
 
-            <div className="pointer-events-none absolute left-1/2 top-[3%] -translate-x-1/2 text-center">
+            <div className="pointer-events-none absolute left-[54%] top-[3.5%] text-left">
               <p className="font-display text-xl font-black uppercase tracking-[0.2em] text-ink/80 md:text-2xl">
                 Summit
               </p>
